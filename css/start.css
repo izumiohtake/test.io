@@ -1,0 +1,336 @@
+@charset "utf-8";
+
+html{
+  font-size: 100%;
+}
+a{
+  text-decoration: none;
+}
+
+.wrapper{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 25px 4% 0;
+}
+
+.page-header{
+  background-color: white;
+}
+
+.main-nav{
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li{
+  color: gray;
+  background:beige;
+  border-style: solid ;
+  border-radius: 5px;
+  border-color: cadetblue;
+  padding: 3px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.main-nav li:hover{
+  background: rgb(197, 190, 190);
+  cursor: pointer;
+}
+
+.page-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+article{
+    width: 30%;
+  }
+
+aside{
+  width: 70%;
+  margin-left: 35px;
+}
+
+h2{
+  border-bottom:3px forestgreen solid;
+}
+
+aside p{
+  line-height: 32px;
+}
+
+/* aside p{
+  height: calc( 1.8em * 4 );
+ line-height: 1.8;
+} */
+
+/* 2calom */
+.new-contents{
+  display: flex;
+  justify-content: space-between;
+}
+ /* つつじ画像 */
+.big-bg{
+  max-width: 100%;
+  max-width: 300px;
+  min-width: 200px;
+  margin-top: 15px;
+  background-repeat: no-repeat;
+}
+
+aside{
+  background-color: lightpink;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+h3{
+  /* margin: 60px 4% 0; */
+  font-size: 1.75rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 25px 4% 0;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4,minmax(200px,1fr));
+
+}
+
+.season{
+  width: 80%;
+}
+
+/* CONTACT */
+/* form{
+  background-color: rgb(155, 241, 68);
+} */
+
+#contact{
+  background-color: rgb(184, 238, 184);
+  margin-top: 100px;
+  /* min-height: 100vh; */
+}
+
+.contact{
+   margin-left: 4%; 
+}
+
+form div{
+  margin-bottom: 14px;
+}
+
+label{
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+background: lemonchiffon;
+border: 1px #000 solid;
+border-radius: 5px;
+padding: 10px;
+font-size: 1rem;
+}
+
+textarea{
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+  resize: none;
+}
+
+input[type="submit"]{
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+input[type="text"],
+input[type="email"]{
+  width: 100%;
+  max-width: 240px;
+}
+
+/* LOCATION */
+.acsess{
+  margin-left: 4%;
+}
+/* 2CALAMN */
+.location{
+  display: flex;
+  justify-content: space-between;
+}
+
+.mapmap{
+  width: 40%;
+}
+
+.sub-title{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: rgb(168, 206, 177) solid;
+}
+
+.map{
+  width: 470px;
+  height: 475px;
+  margin-right: 107px;
+  border: #000 1px solid;
+  margin-bottom: 50px;
+}
+
+
+.location-info{
+  margin-left: 49px;
+  margin-top: 88px;
+}
+.location-map{
+  margin-right: 10px;
+}
+#contact{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 25px 4% 0;
+}
+
+.button{
+  background:green;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 25px;
+  margin-left: 77%;
+}
+
+.button:hover{
+  background: #b7e405;
+}
+
+/* EVENT */
+.event{
+max-width: 100%;
+max-width: 300px;
+min-width: 200px;
+margin-top: 15px;
+max-height: 250px;
+background-repeat: no-repeat;
+}
+
+.ne{
+  display: flex;
+  justify-content: space-between;
+}
+
+.fess{
+  margin-left: 100px;
+}
+
+.yama{
+  margin-right: 100px;
+}
+
+/* CAMP */
+/* 2CALAMN */
+.camping{
+  display: flex;
+  justify-content: space-between;
+}
+
+.yoyaku{
+  margin-right: 100px;
+}
+footer{
+  background: #51cf12;
+  text-align: center;
+  padding:  15px 0;
+  margin: 50px 0;
+}
+
+footer p{
+   color: #fff;
+   font-size: 1rem;
+   padding-bottom: 20px; 
+}
+
+/* モバイル版 */
+@media(max-width:600px){
+  .page-header{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* header */
+  .main-nav{
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .main-nav li{
+    margin: 0 20px;
+  }
+
+  /* home */
+.home-content{
+  margin-top:  20%;
+}
+
+.new-contents{
+  flex-direction: column;
+}
+
+article,
+aside{
+   width: 100%;
+ }
+
+ .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  align-items: center;
+}
+
+
+.camping {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CONTACT*/
+input[type="text"],
+input[type="email"],
+textarea {
+max-width: 100%;
+}
+
+/* LOCATION*/
+.location{
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.mapmap,
+.location-map{
+   width: 100%;
+   /* background-image:linear-gradient(pink white yellow); */
+ }
+
+ iframe{
+   width:100%;
+ }
+
+.location-map{
+  background-image:linear-gradient(pink white yellow);
+}
+
+/* NEWS*/
+.ne{
+  flex-direction: column;
+  align-items: center;
+}
+
+}
