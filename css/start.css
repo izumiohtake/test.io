@@ -7,19 +7,30 @@ a{
   text-decoration: none;
 }
 
+body{
+  background-color: antiquewhite;
+}
+
+i {
+  cursor: pointer;
+}
 .wrapper{
   max-width: 1100px;
   margin: 0 auto;
   padding: 25px 4% 0;
 }
 
-.page-header{
+/* .page-header{
   background-color: white;
+} */
+#nav{
+  width: 270px;
+  height: 100%;
+  margin-right: 150px;
 }
-
 .main-nav{
   display: flex;
-  list-style: none;
+  list-style: none;  
 }
 
 .main-nav li{
@@ -43,22 +54,28 @@ a{
   justify-content: space-between;
 }
 
+.hamberger{
+  color: #000;
+  
+}
 article{
     width: 30%;
   }
 
 aside{
-  width: 70%;
+  width: 30%;
   margin-left: 35px;
 }
 
-h2{
+.post-title h2{
   border-bottom:3px forestgreen solid;
 }
+
 
 aside p{
   line-height: 32px;
 }
+
 
 /* aside p{
   height: calc( 1.8em * 4 );
@@ -70,45 +87,78 @@ aside p{
   display: flex;
   justify-content: space-between;
 }
+
  /* つつじ画像 */
-.big-bg{
-  max-width: 100%;
-  max-width: 300px;
+#bigimg{
+  /* max-width: 100%; */
+  max-width: 600px;
+  max-height: 400px;
   min-width: 200px;
-  margin-top: 15px;
+  margin: 30px;
+  margin-left: 0px;
+
   background-repeat: no-repeat;
 }
 
-aside{
+#gaiyou{
   background-color: lightpink;
+  width: 35%;
+  height:80%;
+  margin-top: 50px;
   margin-left: 10px;
   padding: 10px;
 }
 
 h3{
   /* margin: 60px 4% 0; */
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 25px 4% 0;
+  padding: 25px 10% 0;
 }
 .grid{
   display: grid;
-  grid-template-columns: repeat(4,minmax(200px,1fr));
+  grid-template-columns: repeat(2,minmax(200px,1fr));
 
 }
-
+h4{
+  font-size: 10;
+  background-color: rgba(217, 231, 11, 0.877);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding-top: 15px;
+}
 .season{
-  width: 80%;
+  /* max-width: 100%; */
+  max-width: 300px;
+  min-width: 200px;
+  margin-top: 15px;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
-/* CONTACT */
+.quizzes-container{
+  margin: 80px 170px;
+}
+
+.quiz{
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.btn{
+  background-color: rgb(220, 241, 241);
+  border: 1px solid; 
+}
+  /* CONTACT */
 /* form{
   background-color: rgb(155, 241, 68);
 } */
 
 #contact{
-  background-color: rgb(184, 238, 184);
+  background-color: none;
   margin-top: 100px;
   /* min-height: 100vh; */
 }
@@ -165,10 +215,12 @@ input[type="email"]{
   display: flex;
   justify-content: space-between;
 }
-
-.mapmap{
-  width: 40%;
+h2 .location-info{
+  border-bottom: rgb(216, 18, 51);
 }
+/* .mapmap{
+  width: 40%;
+} */
 
 .sub-title{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -188,11 +240,26 @@ input[type="email"]{
 
 .location-info{
   margin-left: 49px;
-  margin-top: 88px;
+  margin-top: 8px;
 }
 .location-map{
   margin-right: 10px;
 }
+
+.tenki{
+  background:rgb(10, 97, 22);
+  color: rgb(231, 240, 235);
+  border-radius: 5px;
+  padding: 5px 25px;
+  margin-left: 77%;
+}
+
+.tenki:hover{
+  background: rgb(9, 148, 51);
+  cursor: pointer;
+}
+
+
 #contact{
   max-width: 1100px;
   margin: 0 auto;
@@ -248,7 +315,7 @@ footer{
   background: #51cf12;
   text-align: center;
   padding:  15px 0;
-  margin: 50px 0;
+  margin: 50px 0 0 0;
 }
 
 footer p{
@@ -333,4 +400,7 @@ max-width: 100%;
   align-items: center;
 }
 
+.h2{
+  border-bottom: green;
+}
 }

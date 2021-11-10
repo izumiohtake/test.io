@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>test</title>
+	<meta name="robots" content="noindex,nofollow">
+</head>
+
+<body>
+
+	<div class="quizzes-container">
+		<div class="quiz">クイズ</div><br>
+
+		<div class="question">＜第1問＞</div>
+		<div>
+			<p>くじゅう連山の中で一番高い山は？</p>
+		</div>
+		<form id="quiz-1">
+			<input type="radio" name="answer" value="a">上岳
+			<input type="radio" name="answer" value="b">中岳
+			<input type="radio" name="answer" value="c">下岳
+		</form><br>
+		<button type="button" class="btn" onclick="answerQuiz1();">回答する</button>
+		<br>
+		-------------------------------------------------------
+		<br>
+		<div class="question">＜第2問＞</div>
+		<div>
+			<p>その標高は何ｍ？</p>
+		</div>
+		<form id="quiz-2">
+			<input type="radio" name="answer" value="a">1588m
+			<input type="radio" name="answer" value="b">1776m
+			<input type="radio" name="answer" value="c">1992m
+		</form><br>
+		<button type="button" class="btn" onclick="answerQuiz2();">回答する</button>
+		<br><br>
+		<!--score-container-->
+
+		<button type="button" class="btn-score" onclick="showScore();">合計得点を見る</button><br>
+
+		<div id="score-container"><br>
+			<p id="score-message"></p>
+		</div>
+	</div>
+	<!--quizzes-container-->
+
+	<script>
+		'use strict';
+		// クイズの関数
+
+		const quiz_1 = document.getElementById('quiz-1')
+		const quiz_2 = document.getElementById('quiz-2')
+		let score = 0
+
+		function answerQuiz1() {
+			if (quiz_1.answer.value === 'b') {
+				score++;
+				alert("正解");
+				console.log('1', score);
+			} else if (quiz_1.answer.value === 'a' || (quiz_1.answer.value === 'c')) {
+				alert("不正解");
+			} else {
+				alert("1問目の答えを入力してください");
+			}
+		}
+		function answerQuiz2() {
+			if (quiz_2.answer.value === 'b') {
+				score++;
+				alert("正解");
+				console.log('2', score);
+			} else if (quiz_2.answer.value === 'a' || (quiz_2.answer.value === 'c')) {
+				alert("不正解");
+			} else {
+				alert("2問目の答えを入力してください");
+			}
+		}
+
+		function showScore() {
+			const totalScore = document.getElementById('score-message');
+
+			if (score === 2) {
+				totalScore.innerHTML = score + "点：満点！おめでとう！"
+			} else if (score === 1) {
+				totalScore.innerHTML = score + "点：あともう一息！";
+			} else {
+				totalScore.innerHTML = score + "点：残念";
+			}
+			console.log(score);
+
+		}
+	</script>
+</body>
+
+</html>

@@ -18,35 +18,39 @@
 	<!-- <link rel="stylesheet" href="start.css"> -->
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
+<header class="page-header wrapper">
+	<h1><a href="index.html"><i class="fas fa-mountain"></i></a><span>　ACCESS&CONTACT</span></h1>
+	<nav>
+		<ul class="main-nav">
+			<li><a href="news.html">NEWS&EVENT</a></li>
+		</ul>
+	</nav>
+</header><!-- /.home -->
 
 <body>
-	<header class="page-header">
-		<div class="acsess">
-			<h1>ACSESS & CONTACT<span><i class="fas fa-mountain"></i></span></h1>
-		</div>
-	</header>
+
 	<div class="location wrapper">
 		<article class="mapmap">
 			<div class="location-info">
-				<h1 class="sub-title">くじゅう観光協会</h1>
-				<p>
-					住所：大分県〇〇町<br>
-					　　　〇〇３ー４<br>
-					電話：0972-00-0000<br>
-					受付時間：10：00～17:00<br>
-					休日：土・日・祝日
-				</p>
+				<h2>アクセス</h2>
+				<ul>
+					<li>県道40号・県道621号：大分自動車道 九重I.C.（約40分）男池駐車場</li>
+					<li>国道57号・国道325号・県道12号・やまなみハイウェイ・県道621号：九州自動車道 熊本I.C.（約2時間）男池駐車場</li>
+					<li>国道57号・国道325号・県道339号・やまなみハイウェイ：九州自動車道 熊本I.C.（約1時間25分）瀬の本</li>
+					<li>国道442号：瀬の本（約25分）パルクラブ</li>
+					<li>やまなみハイウェイ：瀬の本（約15分）牧ノ戸峠</li>
+				</ul>
 			</div> <!-- location-info -->
 		</article>
-
 		<div class="location-map">
 			<iframe
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179860.52172993706!2d131.12329781552867!3d33.107682168247344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541353b5366af9b%3A0x1fad26a98fd1c695!2z44GP44GY44KF44GG6YCj5bGx!5e0!3m2!1sja!2sjp!4v1629349329186!5m2!1sja!2sjp"
 				width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			<a class="tenki" href="https://www.mountain-forecast.com/peaks/Kuju-Group/forecasts/1788">WEATHER</a>
 		</div>
 		<!--location-map---->
-	</div> <!-- location wrapper -->
-
+	</div><br> <!-- location wrapper -->
+	<hr>
 	<div id="contact">
 		<div class="wrapper">
 			<h2 class="page-title">くじゅう観光協会　問合せ</h2>
@@ -66,7 +70,7 @@
 					<textarea id="message" name="your-maessage"></textarea>
 				</div>
 
-				<a class="button" href="index.html">送信</a>
+				<a class="button" id="send" href="#">送信</a>
 			</form>
 		</div>
 	</div>
@@ -75,7 +79,16 @@
 	<footer>
 		<p><small>&copy;2021 くじゅう観光協会</small></p>
 	</footer>
-
+	<script>
+		'use strict';
+		document.getElementById('send').onclick = function () {
+			const answer = window.confirm('送信しますか');
+			if (answer === true) {
+				window.alert('送信しました');
+			} else {
+			}
+		}
+	</script>
 </body>
 
 </html>
